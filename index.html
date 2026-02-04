@@ -122,16 +122,20 @@
   <!-- Contact -->
   <section id="contact" class="bg-light">
     <div class="container">
+  <div id="successMessage" class="alert alert-success mx-auto text-center" 
+     style="display:none; max-width: 600px; opacity: 0; transition: opacity 0.6s ease;">
+  Thanks! Your message has been sent.
+</div>
+</div>
+    <div class="container">
       <br>
       <h2>Contact Us</h2>
       <div class="row">
         <!-- Contact Form -->
         <div class="col-md-6 mb-4">
-          <form action="https://formsubmit.co/truecoatpainting8@gmail.com" method="POST" class="h-100 d-flex flex-column">
+          <form id="contactForm" action="https://formsubmit.co/truecoatpainting8@gmail.com" method="POST" class="h-100 d-flex flex-column">
   <!-- Prevent spam -->
   <input type="hidden" name="_captcha" value="false">
-  <!-- Optional: Redirect after submission -->
-  <input type="hidden" name="_next" value="https://yourusername.github.io/thankyou.html">
 
   <input type="text" name="name" class="form-control mb-3" placeholder="Name" required>
   <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
@@ -139,6 +143,8 @@
   <textarea name="message" class="form-control mb-3 flex-grow-1" rows="6" placeholder="Message" required></textarea>
   <button type="submit" class="btn btn-primary mt-auto">Send Message</button>
 </form>
+
+
 
         </div>
 
@@ -166,5 +172,49 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const form = this;
+  const formData = new FormData(form);
+  const message = document.getElementById('successMessage');
+
+  fetch(form.action, {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      // Show message
+      message.style.display = 'block';
+      // Force reflow so transition works
+      message.offsetHeight; 
+      message.style.opacity = '1';
+
+      form.reset();
+      message.scrollIntoView({ behavior: 'smooth' });
+
+      // After 4 seconds, fade it out
+      setTimeout(() => {
+        message.style.opacity = '0';
+        // After fade completes, hide it
+        setTimeout(() => {
+          message.style.display = 'none';
+        }, 600); // matches transition duration
+      }, 4000); // visible for 4 seconds
+
+    } else {
+      alert('Oops! There was a problem submitting your form.');
+    }
+  })
+  .catch(error => {
+    alert('Oops! There was a problem submitting your form.');
+  });
+});
+</script>
+
+
+
 </body>
 </html>
