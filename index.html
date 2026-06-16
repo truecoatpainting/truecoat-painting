@@ -4,30 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TrueCoat Painting</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <link href="assets/css/style.css" rel="stylesheet">
-  <!-- FontAwesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18179617792"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18179617792');
+  </script>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#hero"><img src="assets/img/logo.png" alt="TrueCoat Painting" height="50"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon">&#9776;</span>
+      <a class="navbar-brand" href="#hero">
+        <img src="assets/img/logo.png" alt="TrueCoat Painting" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="toggler-icon">&#9776;</span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item">
+            <a class="nav-link nav-phone" href="tel:2899809586">
+              <i class="ti ti-phone" aria-hidden="true"></i> 289-980-9586
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link nav-cta" href="#contact">Get a Free Quote</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -35,129 +48,302 @@
 
   <!-- Hero -->
   <section id="hero">
-    <h1>TrueCoat Painting</h1>
-    <p>Professional Interior & Exterior Painting Services</p>
-    <a href="#contact" class="btn btn-primary btn-lg">Get a Free Quote</a>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <p class="hero-eyebrow">Brampton's Trusted Painters</p>
+      <h1>Quality You Can See.<br>Service You'll Remember.</h1>
+      <p class="hero-sub">Professional interior &amp; exterior painting, deck staining, and power washing — serving Brampton, Mississauga, Toronto, and all across the GTA.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-hero-primary">Get a Free Quote</a>
+        <a href="#gallery" class="btn-hero-ghost">See Our Work</a>
+      </div>
+    </div>
+    <!-- Paintbrush stroke divider -->
+    <div class="hero-stroke">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C200,55 400,5 600,30 C800,55 1000,5 1200,28 C1320,38 1400,25 1440,30 L1440,60 L0,60 Z" fill="#f9f6f1"/>
+      </svg>
+    </div>
   </section>
 
+  <!-- Trust Bar -->
+  <section id="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item">
+          <i class="ti ti-rosette" aria-hidden="true"></i>
+          <span>Licensed &amp; Insured</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <i class="ti ti-star" aria-hidden="true"></i>
+          <span>5-Star Google Rated</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <i class="ti ti-clock" aria-hidden="true"></i>
+          <span>On Time, Every Time</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <i class="ti ti-map-pin" aria-hidden="true"></i>
+          <span>Serving the Entire GTA</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Services -->
-<section id="services">
-  <div class="container">
-    <h2>Our Services</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="service-box">
-          <i class="fas fa-brush"></i>
-          <h4>Interior Painting</h4>
-          <p>Transform your living spaces with fresh colors, smooth finishes, and a clean, polished look.</p>
-        </div>
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">What We Do</p>
+        <h2>Our Services</h2>
+        <p class="section-sub">From a single room refresh to a full exterior transformation — we handle it all with care and precision.</p>
       </div>
-
-      <div class="col-md-4">
-        <div class="service-box">
-          <i class="fas fa-building"></i>
-          <h4>Exterior Painting</h4>
-          <p>Enhance curb appeal and protect your property with durable, weather-resistant coatings.</p>
+      <div class="row g-4">
+        <div class="col-md-4 col-sm-6">
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <i class="ti ti-paint" aria-hidden="true"></i>
+            </div>
+            <h4>Interior Painting</h4>
+            <p>Transform your living spaces with fresh colors, smooth finishes, and a clean, polished look you'll love coming home to.</p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-box">
-          <i class="fas fa-handshake"></i>
-          <h4>Commercial Services</h4>
-          <p>Professional painting for offices, retail stores, and other commercial spaces — done on time and on budget.</p>
+        <div class="col-md-4 col-sm-6">
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <i class="ti ti-building" aria-hidden="true"></i>
+            </div>
+            <h4>Exterior Painting</h4>
+            <p>Enhance curb appeal and protect your property with durable, weather-resistant coatings that last for years.</p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-box">
-          <i class="fas fa-fence"></i>
-          <h4>Fence Staining</h4>
-          <p>Protect your fence from weather damage while enhancing its natural beauty with rich, even staining.</p>
+        <div class="col-md-4 col-sm-6">
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <i class="ti ti-briefcase" aria-hidden="true"></i>
+            </div>
+            <h4>Commercial Services</h4>
+            <p>Professional painting for offices, retail stores, and commercial spaces — completed on time and on budget.</p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-box">
-          <i class="fas fa-tree"></i>
-          <h4>Deck Staining</h4>
-          <p>Revitalize your deck with a professional stain that highlights the wood grain and increases longevity.</p>
+        <div class="col-md-4 col-sm-6">
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <i class="ti ti-fence" aria-hidden="true"></i>
+            </div>
+            <h4>Fence Staining</h4>
+            <p>Protect your fence from weather damage while enhancing its natural beauty with rich, even staining.</p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-box">
-          <i class="fas fa-water"></i>
-          <h4>Power Washing</h4>
-          <p>Remove dirt, grime, and buildup from exterior surfaces for a clean foundation before painting or staining.</p>
+        <div class="col-md-4 col-sm-6">
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <i class="ti ti-home" aria-hidden="true"></i>
+            </div>
+            <h4>Deck Staining</h4>
+            <p>Revitalize your deck with a professional stain that highlights the wood grain and increases longevity.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <i class="ti ti-droplet" aria-hidden="true"></i>
+            </div>
+            <h4>Power Washing</h4>
+            <p>Remove dirt, grime, and buildup from exterior surfaces for a clean foundation before painting or staining.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Gallery -->
-<section id="gallery">
-  <div class="gallery-wrapper">
-    <h2 class="text-center mb-4">Our Work</h2>
-
-    <div class="row g-4">
-      <div class="col-6 col-md-3"><img src="assets/img/project1.jpg" class="gallery-img" alt=""></div>
-      <div class="col-6 col-md-3"><img src="assets/img/project2.jpg" class="gallery-img" alt=""></div>
-      <div class="col-6 col-md-3"><img src="assets/img/project3.jpg" class="gallery-img" alt=""></div>
-      <div class="col-6 col-md-3"><img src="assets/img/project4.jpg" class="gallery-img" alt=""></div>
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Work</p>
+        <h2>Recent Projects</h2>
+        <p class="section-sub">Every job tells a story. Here's a look at some of our recent transformations.</p>
+      </div>
     </div>
-
-    <div class="row g-4 mt-2">
-      <div class="col-6 col-md-3"><img src="assets/img/project5.jpg" class="gallery-img" alt=""></div>
-      <div class="col-6 col-md-3"><img src="assets/img/project6.jpg" class="gallery-img" alt=""></div>
-      <div class="col-6 col-md-3"><img src="assets/img/project7.jpg" class="gallery-img" alt=""></div>
-      <div class="col-6 col-md-3"><img src="assets/img/project8.jpg" class="gallery-img" alt=""></div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="assets/img/project1.jpg" alt="Project 1"></div>
+      <div class="gallery-item"><img src="assets/img/project2.jpg" alt="Project 2"></div>
+      <div class="gallery-item"><img src="assets/img/project3.jpg" alt="Project 3"></div>
+      <div class="gallery-item"><img src="assets/img/project4.jpg" alt="Project 4"></div>
+      <div class="gallery-item"><img src="assets/img/project5.jpg" alt="Project 5"></div>
+      <div class="gallery-item"><img src="assets/img/project6.jpg" alt="Project 6"></div>
+      <div class="gallery-item"><img src="assets/img/project7.jpg" alt="Project 7"></div>
+      <div class="gallery-item"><img src="assets/img/project8.jpg" alt="Project 8"></div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-header light">
+        <p class="section-eyebrow">Testimonials</p>
+        <h2>What Our Customers Say</h2>
+        <p class="section-sub">Don't just take our word for it — here's what real clients have to say.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"The quality of the work was outstanding, with incredible attention to detail and a very professional finish. They truly went above and beyond to make sure every part of the job was completed to our liking."</p>
+            <div class="review-author">
+              <div class="review-avatar">NS</div>
+              <span>Najnin Sultana</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"The paint job is clean and even, with crisp edges, and they left the space tidy. The team was punctual, professional, and respectful of my time. I would recommend them to anyone."</p>
+            <div class="review-author">
+              <div class="review-avatar">AE</div>
+              <span>Ashraf Elhanafey</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"He is very skilled, patient, and takes the time to make sure the job is done right. His pricing is fair and affordable, and the quality of his work is excellent. Highly recommended."</p>
+            <div class="review-author">
+              <div class="review-avatar">GV</div>
+              <span>Geetha Vasudevan</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Very happy with TrueCoat Painting. Great communication and the paint job turned out perfect. Abhijeet was very helpful. Highly recommended."</p>
+            <div class="review-author">
+              <div class="review-avatar">MT</div>
+              <span>Munira Tharani</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"We used TrueCoat for our new office. The previous tenant had a very bright green on two walls. Abhijeet worked really hard trying to cover the color and did an amazing job."</p>
+            <div class="review-author">
+              <div class="review-avatar">NG</div>
+              <span>Noemy Gonzalez</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Extremely satisfied with the paint job. He was very helpful and painted skillfully, helped us in choosing the paint and finished everything on time. Highly recommended."</p>
+            <div class="review-author">
+              <div class="review-avatar">RR</div>
+              <span>Ravi Rai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="https://share.google/igZcHe0j8N2aMG2rx" target="_blank" class="btn-reviews">
+          <i class="ti ti-brand-google" aria-hidden="true"></i>
+          See All Reviews on Google
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Contact -->
-  <section id="contact" class="bg-light">
+  <section id="contact">
     <div class="container">
-  <div id="successMessage" class="alert alert-success mx-auto text-center" 
-     style="display:none; max-width: 600px; opacity: 0; transition: opacity 0.6s ease;">
-  Thanks! Your message has been sent.
-</div>
-</div>
-    <div class="container">
-      <br>
-      <h2>Contact Us</h2>
-      <div class="row">
-        <!-- Contact Form -->
-        <div class="col-md-6 mb-4">
-          <form id="contactForm" action="https://formsubmit.co/truecoatpainting8@gmail.com" method="POST" class="h-100 d-flex flex-column">
-  <!-- Prevent spam -->
-  <input type="hidden" name="_captcha" value="false">
+      <div class="section-header">
+        <p class="section-eyebrow">Get in Touch</p>
+        <h2>Request a Free Quote</h2>
+        <p class="section-sub">Ready to transform your space? Fill out the form and we'll get back to you within 24 hours.</p>
+      </div>
 
-  <input type="text" name="name" class="form-control mb-3" placeholder="Name" required>
-  <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
-  <input type="text" name="phone" class="form-control mb-3" placeholder="Phone" required>
-  <textarea name="message" class="form-control mb-3 flex-grow-1" rows="6" placeholder="Message" required></textarea>
-  <button type="submit" class="btn btn-primary mt-auto">Send Message</button>
-</form>
+      <div id="successMessage" class="success-message" style="display:none;">
+        <i class="ti ti-circle-check" aria-hidden="true"></i>
+        Thanks! Your message has been sent. We'll be in touch within 24 hours.
+      </div>
 
-
-
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-6">
+          <form id="contactForm" action="https://formsubmit.co/truecoatpainting8@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phone" placeholder="(416) 555-0100" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your project</label>
+              <textarea id="message" name="message" rows="5" placeholder="E.g. Interior painting for a 3-bedroom home in Brampton..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send My Request</button>
+          </form>
         </div>
-
-        <!-- Google Map -->
-        <div class="col-md-6 mb-4">
-          <div class="map-location">
+        <div class="col-lg-6">
+          <div class="contact-info-block">
+            <div class="contact-detail">
+              <i class="ti ti-phone" aria-hidden="true"></i>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:2899809586" class="contact-link">289-980-9586</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/12899809586" target="_blank" class="contact-link">Message us on WhatsApp</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="ti ti-mail" aria-hidden="true"></i>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:truecoatpainting8@gmail.com" class="contact-link">truecoatpainting8@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="ti ti-map-pin" aria-hidden="true"></i>
+              <div>
+                <strong>Service Area</strong>
+                <span>Proudly serving all areas across the Greater Toronto Area</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="ti ti-clock" aria-hidden="true"></i>
+              <div>
+                <strong>Hours</strong>
+                <span>Monday – Saturday, 8am – 6pm</span>
+              </div>
+            </div>
+          </div>
+          <div class="map-wrap">
             <iframe
               src="https://www.google.com/maps?q=45%20Chalkfarm%20Crescent%2C%20Brampton%2C%20ON&output=embed"
-              width="100%" height="350"
+              width="100%" height="300"
               style="border:0;"
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
+              referrerpolicy="no-referrer-when-downgrade"
+              title="TrueCoat Painting location">
             </iframe>
           </div>
         </div>
@@ -167,54 +353,62 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 TrueCoat Painting. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <img src="assets/img/logo.png" alt="TrueCoat Painting" height="40" class="footer-logo">
+        <p class="footer-tagline">Painting Brampton with pride, one coat at a time.</p>
+        <div class="footer-contact-icons">
+          <a href="tel:2899809586" class="footer-contact-icon" aria-label="Call us">
+            <i class="ti ti-phone" aria-hidden="true"></i>
+            <span>289-980-9586</span>
+          </a>
+          <a href="https://wa.me/12899809586" target="_blank" class="footer-contact-icon" aria-label="WhatsApp">
+            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+          </a>
+          <a href="mailto:truecoatpainting8@gmail.com" class="footer-contact-icon" aria-label="Email us">
+            <i class="ti ti-mail" aria-hidden="true"></i>
+            <span>Email Us</span>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p class="footer-copy">&copy; 2025 TrueCoat Painting. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const form = this;
-  const formData = new FormData(form);
-  const message = document.getElementById('successMessage');
+    // Navbar scroll shadow
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+    });
 
-  fetch(form.action, {
-    method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  })
-  .then(response => {
-    if (response.ok) {
-      // Show message
-      message.style.display = 'block';
-      // Force reflow so transition works
-      message.offsetHeight; 
-      message.style.opacity = '1';
-
-      form.reset();
-      message.scrollIntoView({ behavior: 'smooth' });
-
-      // After 4 seconds, fade it out
-      setTimeout(() => {
-        message.style.opacity = '0';
-        // After fade completes, hide it
-        setTimeout(() => {
-          message.style.display = 'none';
-        }, 600); // matches transition duration
-      }, 4000); // visible for 4 seconds
-
-    } else {
-      alert('Oops! There was a problem submitting your form.');
-    }
-  })
-  .catch(error => {
-    alert('Oops! There was a problem submitting your form.');
-  });
-});
-</script>
-
-
-
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = this;
+      const msg = document.getElementById('successMessage');
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          msg.style.display = 'flex';
+          form.reset();
+          msg.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => { msg.style.display = 'none'; }, 6000);
+        } else {
+          alert('Oops! There was a problem submitting your form.');
+        }
+      }).catch(() => alert('Oops! There was a problem submitting your form.'));
+    });
+  </script>
 </body>
 </html>
